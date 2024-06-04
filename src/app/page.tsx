@@ -1,95 +1,59 @@
 import Image from "next/image";
-import styles from "./page.module.css";
-
+import styles from "./page.module.scss";
+import { Row, Col, Button } from "antd";
+import animation from '@/assets/Sequence 01 (1).gif'
+import logo from '@/assets/headmade.svg'
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      <main className={styles.main}>
+        <div className={styles.header}>
+          <Row justify={"center"}>
+            <Col xs={23} lg={20}>
+              <div className={styles.head}>
+              <p className={styles.icon}>Channel Warder <span className={styles.byhead}>by HeadMade</span></p>
+              <a className={styles.phone} href="">+7 (843) 259-99-23</a>
+              </div>
+
+              <div className={styles.main_wrapper}>
+                <p className={styles.title}>Антиспам-бот</p>
+                <p className={styles.description}>Антиспам-бот для борьбы со спамом в Telegram-каналах</p>
+                <a className={styles.link_bot} href="https://t.me/channel_warder_bot">@channel_warder_bot</a>
+                <Button href="https://t.me/channel_warder_bot" className={styles.connect_btn}>Подключить</Button>
+              </div>
+            </Col>
+          </Row>
+
         </div>
+
+      </main>
+      <div className={styles.forwho}>
+        <Row justify={"center"} align={'middle'}>
+          <Col xs={23} lg={20}>
+            <Row justify={'center'} align={'middle'}>
+              <Col xs={24} lg={14}>
+                <p className={styles.forwho_header}>Кому?</p>
+                <p className={styles.description_for}>Ваш телеграмм канал развивается и стал популярным. Поздравляем Вас!
+                  Теперь настало время обезопасить свой канал от спама и непроверенной рекламы.</p>
+                <p className={styles.forwho_subheader}>О нашем решении:</p>
+                <p className={styles.description_for}>
+                  Антиспам-бот осуществляет мониторинг комментариев в канале круглосуточно 24/7. Автоматически удаляет комментарий в случее обнаружения спама по ключевым словам. Вам доступна настройка семантического ядра.
+                </p>
+              </Col>
+              <Col xs={24} lg={10}>
+                <Image className={styles.animation} unoptimized src={animation} alt="gif" />
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+
       </div>
+      <div className={styles.footer}>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+<Image src={logo} alt="logo" className={styles.logo}/>
+<p style={{marginBottom: 0}}>Разработано <a className={styles.link_hm} href="https://headmade.pro/">Headmade</a></p>
+      <p>© 2024</p>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }

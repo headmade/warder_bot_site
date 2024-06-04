@@ -22,6 +22,7 @@
   margin-top: 50px;
   // align-items: center;
   border: 5px solid #000;
+
   @media(min-width: 992px) {
     padding: 100px;
   }
@@ -48,25 +49,16 @@
   color: #000;
   font-size: 24px;
   display: flex;
-  align-items: center;
 
-  img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-  }
-  :hover,
-  :active,
-  :focus {
-    color: #000;
-  }
+  align-items: center;
 }
 
 .byhead {
   font-size: 16px;
   margin-left: 10px;
   color: #BE2A8C !important;
-  
+  margin-top: 7px;
+
 }
 
 .title {
@@ -75,6 +67,7 @@
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 60px;
+
   @media(min-width: 992px) {
     font-size: 80px;
   }
@@ -99,9 +92,11 @@
   margin: 0;
   padding: 0;
   color: #BE2A8C;
+
   &:hover {
     color: #BE2A8C !important;
   }
+
   &:active {
     color: #BE2A8C !important;
   }
@@ -112,9 +107,11 @@
   color: #BE2A8C;
   margin: 0;
   padding: 0;
+
   &:hover {
     color: #BE2A8C !important;
   }
+
   &:active {
     color: #BE2A8C !important;
   }
@@ -126,6 +123,7 @@
   margin-top: 30px;
   display: flex;
   font-size: 60px;
+
   @media(min-width: 992px) {
     font-size: 80px;
   }
@@ -136,6 +134,7 @@
   color: #000;
   margin-top: 50px;
   font-size: 60px;
+
   @media(min-width: 992px) {
     font-size: 80px;
   }
@@ -151,6 +150,7 @@
   border-radius: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+
   @media(min-width: 992px) {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -176,4 +176,15 @@
 .link_hm {
   text-decoration: none;
   color: #BE2A8C !important;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  @media(min-width: 992px) {
+    flex-direction: row;
+  }
 }
