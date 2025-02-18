@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "touch ./out/.nojekyll && next build && gh-pages -d out"
+    "deploy": "rm -rf .next out && next build && mkdir -p out && touch out/.nojekyll && echo 'warden-bot.headmade.pro' > out/CNAME && gh-pages -d out"
   },
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.0",

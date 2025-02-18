@@ -16,17 +16,17 @@ export default function Home() {
               <a className={styles.phone} href="tel:+78432599923">+7 (843) 259-99-23</a>
               </div>
 
-              <div className={styles.main_wrapper}>
+
+            </Col>
+          </Row>
+
+        </div>
+        <div className={styles.main_wrapper}>
                 <p className={styles.title}>Антиспам-бот</p>
                 <p className={styles.description}>Антиспам-бот для борьбы со спамом в Telegram-каналах</p>
                 <a className={styles.link_bot} href="https://t.me/moderator_warder_support_bot">@moderator_warder_support_bot</a>
                 <Button target="_blank" href="https://t.me/moderator_warder_support_bot" className={styles.connect_btn}>Связаться с нами</Button>
               </div>
-            </Col>
-          </Row>
-
-        </div>
-
       </main>
       <div className={styles.forwho}>
         <Row justify={"center"} align={'middle'}>
